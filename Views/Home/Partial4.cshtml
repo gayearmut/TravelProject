@@ -1,0 +1,35 @@
+﻿@using TravelProject.Models.Classes
+@model List<Blog>
+
+<div class="box1-left">
+    <div class="bot-img">
+        <a href="/Blog/BlogDetay/20"><img src="https://i.hizliresim.com/o7avdtv.jpg" alt="" />
+    </div>
+    <div class="bot-desc1">
+        <a href="/Blog/BlogDetay/20"><p>Hollandaya giderken, rüzgarın esintisiyle sarhoş olacak ve renkli çiçek tarlalar...</p>
+    </div>
+    <div class="clear"></div>
+    <div class="bot-img">
+        <a href="/Blog/BlogDetay/22"><img src="https://i.hizliresim.com/hnes26s.jpg" alt="" />
+    </div>
+    <div class="bot-desc1">
+        <a href="/Blog/BlogDetay/22"><p>Rotterdam'da vapur turu, bu modern ve dinamik şehri keşfetmek için harika bir s...</p>
+    </div>
+    <div class="clear"></div>
+    <div class="bot-img">
+        <a href="/Blog/BlogDetay/23"><img src="https://i.hizliresim.com/jy986v1.jpg" alt="" />
+    </div>
+    <div class="bot-desc1">
+        <a href="/Blog/BlogDetay/23"><p>Japonya, gençlik hayallerimi süsleyen, beni büyüleyen ve keşfetmek için sabırsı...</p>
+    </div>
+    <div class="clear"></div>
+	@*@foreach(var x in Model){
+		<div class="bot-img">
+			<img src="@x.BlogImage" alt="" />
+		</div>
+		<div class="bot-desc1">
+			<p>@x.Aciklama.Substring(0,80)</p>
+		</div>
+		<div class="clear"></div>
+		}*@
+	</div>

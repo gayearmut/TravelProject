@@ -1,0 +1,130 @@
+﻿@using TravelProject.Models.Classes;
+@model List<Blog>
+
+@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<body>
+	<div class="header-banner">
+		<div class="wrap">
+			<div class="banner">
+				<div class="indent">
+					<h2 class="indent-left margin-bot" style="margin-right:40px" >Seyahat Bloğum</h2>
+					<div class="d-flex">
+						<div class="banner-left">
+							<div class="con-text">
+								<div class="grid1-img">
+									<img src="~/web/images/glass.png" alt="">
+								</div>
+								<a href="https://guide.michelin.com/tr/tr" target="_blank">
+								<div class="grid1-desc">
+									<p>Restoranlar</p>
+								</div>
+								<div class="clear"></div>
+							</div>
+							</a>
+							<a href="https://www.turkishairlines.com/" target="_blank">
+								<div class="con-text">
+									<div class="grid1-img">
+										<img src="~/web/images/flight.png" alt="">
+									</div>
+									<div class="grid1-desc">
+										<p>Uçuşlar</p>
+									</div>
+									<div class="clear"></div>
+								</div>
+							</a>
+							
+							<a href="https://www.tripadvisor.com/" target="_blank">
+								<div class="con-text">
+									<div class="grid1-img">
+										<img src="~/web/images/group.png" alt="">
+									</div>
+								</div>
+								<div class="grid1-desc">
+									<p>Yapılacak Şeyler</p>
+								</div>
+								<div class="clear"></div>
+							</a>
+							<a href="https://www.booking.com/" target="_blank">
+							<div class="con-text">
+								<div class="grid1-img">
+									<img src="~/web/images/key.png" alt="">
+								</div>
+							</div>
+							<div class="grid1-desc">
+								<p>Araba Kiralama</p>
+							</div>
+							<div class="clear"></div>
+							</a>
+						</div>
+						<div class="header_bottom_right_images">
+
+							<div class="slider">
+								<ul class="rslides" id="slider1">
+									@foreach (var x in Model)
+									{
+										<li><img src="@x.BlogImage" alt=""></li>
+										@*  <li><img src="~/web/images/img2.jpg" alt=""></li>
+									<li><img src="~/web/images/img3.jpg" alt=""></li>
+									<li><img src="~/web/images/img4.jpg" alt=""></li>*@
+									}
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="clear">
+					</div>
+				</div>
+
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+	<div class="clear"></div>
+	</div>
+	</div>
+	<div class"content">
+		<div class="wrap">
+			<div class="wrapper">
+				<div class="con-top">
+					<h3>Tatil  Seyahat Sitemize Hoşgeldiniz!</h3>
+					<p>
+						Bu projeyi son sınıfta yapmak zorunda olduğum bitirme projesi kapsamında, güz dönemi;
+						Şubat 2023 ve Haziran 2023 tarihleri arasında yapmış bulunmaktayım.Gezip gördüğüm yerleri sizlerle paylaşmak için,
+						ayrıca buralara gitmeyi düşünen insanlara yardımcı olmak için
+						kodlamasını tamamen kendim yaptığım MVC üzerine kurulu dinamik bir web projesi geliştirdim.
+						Hem Türkiye'den hem de yurtdışından gezip gördüğüm yerleri blog yazıları olarak sizlerle paylaşmak niyetindeyim.
+						Umuyorum ki yazdıklarımı ve projemi beğenirsiniz, keyifli okumalar!
+					</p>
+				</div>
+				<partial name="Partial1" />
+				<div class="grids">
+					<div class="box1">
+						@*@Html.ActionLink("Partial2","Home")*@
+						<partial name="Partial2" />
+						@*@Html.Partial("Partial2",@Model)*@
+
+						@*@Html.ActionLink("Partial3","Home")*@
+						<partial name="Partial3" />
+						<div class="clear"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
+
+
